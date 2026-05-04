@@ -47,7 +47,7 @@ body {
     margin-right: 380px;
 }
 
-@media (max-width:768xp){
+@media (max-width:768px){
     .app-main.chat-open {
         margin-right: 0;
     }
