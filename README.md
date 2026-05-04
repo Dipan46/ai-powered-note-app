@@ -96,7 +96,7 @@ The backend leverages **OpenAI function-calling** (via the **OpenRouter** gatewa
                    │                         │
                    │  GET  /api/notes  ──────┼──► MongoDB (list notes)
                    │  POST /api/chat   ──────┼──► OpenRouter AI
-                   └────────────┬────────────┘         │
+                   └────────────┬────────────┘          │
                                 │                       │ GPT-4o-mini
                                 │               ┌───────▼──────────┐
                                 │               │ Function Calling │
