@@ -181,10 +181,18 @@
         font-size: 3rem;
     }
 
+        .chat-header{
+            height: 12rem;
+        }
+
     .chat-header h3 {
-        font-size: 2.5rem;
+        font-size: 4.5rem;
         font-weight: 500;
         padding: 1rem;
+    }
+
+    .chat-close{
+        font-size: 4rem;
     }
 
     .chat-hint {

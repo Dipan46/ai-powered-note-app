@@ -48,6 +48,10 @@ body {
 }
 
 @media (max-width:768px) {
+.app-header{
+    height: 15rem;
+}
+
     .app-main.chat-open {
         margin-right: 0;
     }

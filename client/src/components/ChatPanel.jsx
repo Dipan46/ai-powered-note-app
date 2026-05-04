@@ -83,7 +83,7 @@ export default function ChatPannel({ isOpen, onClose, onNoteUpdate }) {
             <div className="chat-header">
                 <h3>Note Assistent</h3>
                 <button className="chat-close" onClick={onClose}>
-                    🗙
+                    ✘
                 </button>
             </div>
             <div className="chat-messages">
