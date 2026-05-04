@@ -110,11 +110,11 @@ Vercel will show a configuration screen. Fill it in like this:
 
 | Setting | Value |
 |---|---|
-| **Framework Preset** | `Vite` (Vercel should auto-detect this) |
-| **Root Directory** | Click **"Edit"** → type `client` → click **"Continue"** |
-| **Build Command** | `npm run build` (leave as default) |
-| **Output Directory** | `dist` (leave as default) |
-| **Install Command** | `npm install` (leave as default) |
+| **Framework Preset** | `Other` |
+| **Root Directory** | Leave **blank** (keep as repo root `/`) |
+| **Build Command** | `npm run build --workspace=client` |
+| **Output Directory** | `client/dist` |
+| **Install Command** | `npm install` |
 
 ### Step 4 — Add Environment Variables
 1. Expand the **"Environment Variables"** section
@@ -158,13 +158,13 @@ Now that you have your Vercel URL, go back to Render:
 
 ## ✅ Final Checklist
 
-| Check | Status |
+| Setting | Value |
 |---|---|
-| Backend deployed on Render | ✅ |
-| Frontend deployed on Vercel | ✅ |
-| `VITE_API_URL` in Vercel points to Render URL + `/api` | ✅ |
-| `CLIENT_URL` in Render points to Vercel URL | ✅ |
-| MongoDB Atlas Network Access allows `0.0.0.0/0` | ✅ |
+| **Framework Preset** | `Other` |
+| **Root Directory** | Leave **blank** (keep as repo root `/`) |
+| **Build Command** | `npm run build --workspace=client` |
+| **Output Directory** | `client/dist` |
+| **Install Command** | `npm install` |
 
 ---
 
