@@ -15,6 +15,8 @@
 - [x] Your code is pushed to GitHub at `github.com/Dipan46/ai-powered-note-app`
 - [x] Production `start` script already added to `server/package.json`
 - [x] CORS already configured for production in `server/index.js`
+- [x] Vite downgraded from v8 → v5 (fixes Vercel Linux build error)
+- [x] Root `package-lock.json` regenerated (removes `rolldown` dependency)
 - [ ] You have a free [Render](https://render.com) account (sign up with GitHub)
 - [ ] You have a free [Vercel](https://vercel.com) account (sign up with GitHub)
 
@@ -104,17 +106,22 @@ You should see `[]` (an empty array) or your notes as JSON. ✅
 2. Find **`ai-powered-note-app`** in the list → Click **"Import"**
 
 ### Step 3 — Configure the Project
-> ⚠️ This is the most important step — Vercel needs to know your frontend is in the `client` folder.
+> ⚠️ This is the most important step — fill these in **exactly** as shown.
 
 Vercel will show a configuration screen. Fill it in like this:
 
 | Setting | Value |
 |---|---|
-| **Framework Preset** | `Vite` (Vercel should auto-detect this) |
-| **Root Directory** | Click **"Edit"** → type `client` → click **"Continue"** |
-| **Build Command** | `npm run build` (leave as default) |
-| **Output Directory** | `dist` (leave as default) |
-| **Install Command** | `npm install` (leave as default) |
+| **Framework Preset** | `Other` |
+| **Root Directory** | Leave **blank** (keep as repo root `/`) |
+| **Build Command** | `npm run build --workspace=client` |
+| **Output Directory** | `client/dist` |
+| **Install Command** | `npm install` |
+
+> [!IMPORTANT]
+> **Do NOT set Root Directory to `client`.** This project uses npm workspaces — Vercel must run `npm install` from the repo root so all workspace dependencies resolve correctly. Setting Root Directory to `client` breaks the install.
+>
+> The build command `npm run build --workspace=client` tells npm to run the build script inside the `client` workspace. The output goes to `client/dist`.
 
 ### Step 4 — Add Environment Variables
 1. Expand the **"Environment Variables"** section
@@ -127,6 +134,9 @@ Vercel will show a configuration screen. Fill it in like this:
 > Replace the URL with your actual Render URL from Part 1 Step 6.
 >
 > ✅ Correct format: `https://your-service-name.onrender.com/api` (ends with `/api`, no trailing slash)
+
+> [!IMPORTANT]
+> **Add the env variable BEFORE clicking Deploy.** Vite bakes environment variables into the JavaScript bundle at build time. If `VITE_API_URL` is missing during the build, all API calls will fail with a 404 error. If you forget, add the variable in Vercel → Settings → Environment Variables and then **Redeploy**.
 
 ### Step 5 — Deploy!
 1. Click the big **"Deploy"** button
@@ -178,10 +188,16 @@ Now that you have your Vercel URL, go back to Render:
 - Go to Render → Logs → look for the error
 - Most common cause: **Root Directory not set to `server`** — check in Settings → Root Directory
 
-### ❌ Frontend shows blank page or "Network Error"
+### ❌ Frontend shows blank page or "Network Error" / notes show 404
 - Check Vercel → Settings → Environment Variables
-- Make sure `VITE_API_URL` ends with `/api` and has **no trailing slash**
-- Go to Vercel → Deployments → click the 3 dots → **Redeploy**
+- Make sure `VITE_API_URL` is set and ends with `/api` — **no trailing slash**
+- After adding/changing the variable, you **must Redeploy** — Vercel bakes env vars into the build at compile time
+- Go to Vercel → Deployments → click the 3 dots (⋯) → **Redeploy**
+
+### ❌ Vercel build fails: "Cannot find native binding" / rolldown error
+- This is a **Vite 8 + npm workspaces** incompatibility on Linux
+- It is already fixed in this repo (downgraded to Vite 5, regenerated `package-lock.json`)
+- If it reappears: delete `package-lock.json` from the repo root, run `npm install` locally, commit and push the new lock file
 
 ### ❌ First request takes 60 seconds (cold start)
 - This is **normal** on Render's free plan — the server sleeps after 15 min of inactivity
