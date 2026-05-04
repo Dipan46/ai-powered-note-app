@@ -49,7 +49,7 @@ The backend leverages **OpenAI function-calling** (via the **OpenRouter** gatewa
 
 ## 🌐 Live Preview
 
-**Try the live application here:** [https://ai-powered-note-app-client.vercel.app](https://ai-powered-note-app-client.vercel.app)
+**Try the live application here:** [Live here](https://ai-powered-note-app-client.vercel.app/)
 
 ---
 
