@@ -14,6 +14,8 @@
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
+- [Live Preview](#-live-preview)
+- [Preview](#-preview)
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
 - [Tech Stack](#-tech-stack)
@@ -42,6 +44,12 @@ The backend leverages **OpenAI function-calling** (via the **OpenRouter** gatewa
 - *"What's in note 2?"* → Retrieves that specific note  
 - *"Update note 3 to buy groceries"* → Updates the note content
 - *"Delete all my notes"* → Clears the database
+
+---
+
+## 🌐 Live Preview
+
+**Try the live application here:** [https://ai-powered-note-app-client.vercel.app](https://ai-powered-note-app-client.vercel.app)
 
 ---
 
