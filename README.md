@@ -566,9 +566,6 @@ You don't need exact syntax — just speak naturally:
 - [ ] Note categories / tags
 - [ ] Markdown rendering in notes
 - [ ] Dark mode
-- [ ] Mobile-responsive layout fixes
-- [ ] Fix CSS typos (`1x` → `1px`, `768xp` → `768px`)
-- [ ] Fix chat message keys (stable IDs instead of `uuidv4()` in render)
 
 ---
 
