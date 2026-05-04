@@ -582,7 +582,7 @@ You don't need exact syntax — just speak naturally:
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the [MIT License](LICENSE)..
 
 ---
 
