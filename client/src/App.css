@@ -49,7 +49,7 @@ body {
 
 @media (max-width:768px) {
 .app-header{
-    height: 15rem;
+    height: 12rem;
 }
 
     .app-main.chat-open {
@@ -57,16 +57,10 @@ body {
     }
 
     .app-header h1 {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 
     .note-count {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width:500px) {
-    .app-header h1 {
-        font-size: 6rem;
+        font-size: 2.3rem;
     }
 }
