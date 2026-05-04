@@ -202,8 +202,23 @@
         font-size: 2.8rem;
     }
 
-    @media (max-width: 500px) {
-        .chat-panel {
-            width: 100%;
-        }
+    .chat-message.user .chat-bubble {
+        font-size: 2.7rem;
+        padding: 0.5rem 3rem 0.5rem 2rem;
     }
+
+    .chat-message.bot .chat-bubble {
+        font-size: 2.7rem;
+        padding: 1rem 3rem 1rem 3rem;
+    }
+
+    .bot{
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .chat-panel {
+        width: 100%;
+    }
+}
