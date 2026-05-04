@@ -4,20 +4,32 @@
     bottom: 24px;
     width: 56px;
     height: 56px;
-    border-radius: 50%;
-    background: #4f46e6;
-    color: #fff;
+    font-size: 3rem;
+    background: transparent;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s;
     z-index: 99;
 }
 
 .message-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .message-button {
+        font-size: 8rem;
+        left: 90%;
+        bottom: 5%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 500px) {
+    .message-button {
+        left: 85%;
+    }
 }

@@ -103,12 +103,13 @@ const tool = [
 ]
 
 app.use(cors({
-    origin: process.env.CLIENT_URL 
-        ? [process.env.CLIENT_URL, process.env.CLIENT_URL.replace(/\/$/, "")] 
+    origin: process.env.CLIENT_URL
+        ? [process.env.CLIENT_URL, process.env.CLIENT_URL.replace(/\/$/, "")]
         : "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
+
 app.use(express.json())
 app.use("/api/notes", noteRoutes);
 
@@ -119,7 +120,6 @@ async function deleteNote(id) {
         success: false,
         message: `Note #${id} not found`
     };
-
 
     return {
         success: true,
@@ -257,16 +257,15 @@ app.post('/api/chat', async (req, res) => {
 
         // If AI did not works
         if (usedAI && !result)
-            return res.status(503).json({ error: "AI service unavailable", message })
+            return res.status(503).json({ error: "AI service unavailable", message });
 
-        if (!result) {
+        if (!result)
             return res.json({ message: "I didn't understand that. Try: 'Add note, Delete note (id), Update note (id), List all note, Delete all note" });
-        }
 
         res.json(result);
     } catch (err) {
         console.error("Chat error:", err);
-        res.status(500).json({ error: err.message })
+        res.status(500).json({ error: err.message });
     }
 })
 

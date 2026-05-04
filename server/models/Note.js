@@ -27,9 +27,9 @@ noteSchema.pre("save", async function () {
 
         let newId = 1;
 
-        while (existingIds.has(newId)) {
+        while (existingIds.has(newId))
             newId++;
-        }
+
         this.sequenceId = newId;
     }
 });

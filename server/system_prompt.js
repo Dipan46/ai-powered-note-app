@@ -114,5 +114,3 @@ TIPS FOR UNDERSTANDING USERS:
 - If they ask "what are", "show me all", "list" → use get_all_notes
 
 Always be conversational and friendly. Confirm what you've done.`;
-
-

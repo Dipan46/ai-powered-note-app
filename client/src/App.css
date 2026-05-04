@@ -47,8 +47,22 @@ body {
     margin-right: 380px;
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
     .app-main.chat-open {
         margin-right: 0;
+    }
+
+    .app-header h1 {
+        font-size: 5rem;
+    }
+
+    .note-count {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:500px) {
+    .app-header h1 {
+        font-size: 6rem;
     }
 }

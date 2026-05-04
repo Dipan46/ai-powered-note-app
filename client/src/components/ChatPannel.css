@@ -171,3 +171,39 @@
 .chat-input-area input:focus {
     border-color: #4f46e5;
 }
+
+@media (max-width: 768px) {
+    .chat-panel {
+        width: 70%;
+    }
+
+    .chat-welcome {
+        font-size: 3rem;
+    }
+
+    .chat-header h3 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        padding: 1rem;
+    }
+
+    .chat-hint {
+        padding-top: 20px;
+        font-size: 1.5rem;
+    }
+
+    .chat-input-area input {
+        height: 6rem;
+        font-size: 2rem;
+    }
+
+    .chat-input-area button {
+        width: 20%;
+        font-size: 2.8rem;
+    }
+
+    @media (max-width: 500px) {
+        .chat-panel {
+            width: 100%;
+        }
+    }
