@@ -197,9 +197,9 @@ Now that you have your Vercel URL, go back to Render:
 
 | Service | URL |
 |---|---|
-| **Frontend (Vercel)** | `https://ai-powered-note-app.vercel.app` |
-| **Backend (Render)** | `https://ai-note-app-backend.onrender.com` |
-| **API Base URL** | `https://ai-note-app-backend.onrender.com/api` |
+| **Frontend (Vercel)** | `https://ai-powered-note-app-client.vercel.app` |
+| **Backend (Render)** | `https://ai-powered-note-app.onrender.com` |
+| **API Base URL** | `https://ai-powered-note-app.onrender.com/api` |
 
 ---
 
