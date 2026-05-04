@@ -1,0 +1,20 @@
+{
+    "name": "ai-powered-note-app",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "server": "npm run dev --workspace=server",
+        "client": "npm run dev --workspace=client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "install:all": "npm install && npm install --workspace=server && --workspace=client"
+    },
+    "workspaces": [
+        "server",
+        "client"
+    ],
+    "keywords": [],
+    "author": "Dipan46",
+    "dependencies": {
+        "concurrently": "^9.2.1"
+    }
+}

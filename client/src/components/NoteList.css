@@ -1,0 +1,19 @@
+.note-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.note-list-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    color: #9ca3af;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+}
