@@ -11,8 +11,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 2px 2px 6px #000000;
     transition: transform 0.2s;
     z-index: 99;
+    animation: shake 0.8s ease-in-out 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    20%, 60% { transform: rotate(-15deg); }
+    40%, 80% { transform: rotate(15deg); }
+}
+
+@keyframes shake-mobile {
+    0%, 100% { transform: translateX(-50%) rotate(0deg); }
+    20%, 60% { transform: translateX(-50%) rotate(-15deg); }
+    40%, 80% { transform: translateX(-50%) rotate(15deg); }
 }
 
 .message-button:hover {
@@ -25,11 +39,13 @@
         left: 90%;
         bottom: 5%;
         transform: translateX(-50%);
+        animation-name: shake-mobile;
     }
 }
 
 @media (max-width: 500px) {
     .message-button {
+        font-size: 6rem;
         left: 85%;
     }
 }

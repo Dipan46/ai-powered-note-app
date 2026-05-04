@@ -8,7 +8,7 @@ import MessageButton from "./components/MessageButton";
 
 function App() {
     const [notes, setNotes] = useState([]);
-    const [chatOpen, setChatOpen] = useState(true);
+    const [chatOpen, setChatOpen] = useState(false);
 
     const fetchNote = async () => {
         try {

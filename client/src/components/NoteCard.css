@@ -64,7 +64,7 @@
 
 @media (max-width: 500px) {
     .note-card {
-        margin: 2rem 3rem;
+        margin: 1rem;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     }
 
