@@ -103,7 +103,9 @@ const tool = [
 ]
 
 app.use(cors({
-    origin: process.env.CLIENT_URL || "*",
+    origin: process.env.CLIENT_URL 
+        ? [process.env.CLIENT_URL, process.env.CLIENT_URL.replace(/\/$/, "")] 
+        : "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
